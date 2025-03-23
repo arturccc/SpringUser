@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms'; // Importação necessária
-import { AppComponent } from './app.component'; // Seu componente principal
-import { RegsiterComponent } from './auth/regsiter.component'; // Seu componente do formulário
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UsuarioService } from './Service/Usuarios.service';
 @NgModule({
   declarations: [
 
@@ -12,9 +12,9 @@ import { RegsiterComponent } from './auth/regsiter.component'; // Seu componente
     BrowserModule,
     ReactiveFormsModule ,
     AppComponent,
-    RegsiterComponent
+    HttpClientModule
   ],
   providers: [],
-  bootstrap: []
+  bootstrap: [UsuarioService]
 })
 export class AppModule { }

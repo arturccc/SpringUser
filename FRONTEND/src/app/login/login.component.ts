@@ -21,6 +21,6 @@ export class LoginComponent {
   }
 
   getFormValue(){
-    console.log(this.regsiterForm.value)
+    console.log(this.loginForm.value)
   }
 }
